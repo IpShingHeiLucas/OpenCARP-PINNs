@@ -3,6 +3,7 @@
 This cose is modified version of EP-PINNs developed by Clara Herrero Martin
 
 This code contain sevarl input parameter
+
   **Reqauired Parameter**
       -m: The name of the output file
       -vf: The path to the vm.igb file
