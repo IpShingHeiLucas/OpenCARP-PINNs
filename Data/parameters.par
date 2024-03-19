@@ -1,0 +1,111 @@
+# CARP GIT commit hash: 6e15ad13536539ad0e79a3ee40a2c950f0db8471
+# dependency hashes:    
+
+# openCARP +F parameters.par 
+
+#=======================================================>>
+## parameters.par ##
+# CARP GIT commit hash: 6e15ad13536539ad0e79a3ee40a2c950f0db8471
+# dependency hashes:    
+
+# /usr/local/bin/openCARP +F basic.par -ellip_use_pt 0 -parab_use_pt 0 -parab_options_file /usr/local/lib/python3.8/dist-packages/carputils/resources/petsc_options/ilu_cg_opts
+# -ellip_options_file /usr/local/lib/python3.8/dist-packages/carputils/resources/petsc_options/gamg_cg_opts -simID exp -meshname meshes/2024-03-18_rZgJwKSLMZ/block
+# -dt 25 -tend 20.0 -num_phys_regions 2 -phys_region[0].name Intracellular domain -phys_region[0].ptype 0 -phys_region[0].num_IDs
+# 1 -phys_region[0].ID[0] 1 -phys_region[1].name Extracellular domain -phys_region[1].ptype 1 -phys_region[1].num_IDs 1 -phys_region[1].ID[0]
+# 1 -num_stim 1 -stimulus[0].name S1 -stimulus[0].stimtype 0 -stimulus[0].strength 20.0 -stimulus[0].duration 2.0 -stimulus[0].x0
+# -5050.0 -stimulus[0].xd 100.0 -stimulus[0].y0 -550.0 -stimulus[0].yd 1100.0 -stimulus[0].z0 -150.0 -stimulus[0].zd 300.0 -gridout_i
+# 3 -gridout_e 3 -s
+
+
+# CARP GIT commit hash: 6e15ad13536539ad0e79a3ee40a2c950f0db8471
+# dependency hashes:    
+
+# openCARP +F parameters.par 
+
+#=======================================================>>
+## parameters.par ##
+num_imp_regions = 1 
+
+imp_region[0].im = AlievPanfilov
+
+#electrical setup
+num_stim             =      1 
+
+stimulus[0].name     = "S1"
+stimulus[0].stimtype =      0 
+stimulus[0].strength =    250.0
+stimulus[0].duration =      2.
+stimulus[0].start    =      0.
+
+bidomain    =   0 
+timedt      =   1.
+parab_solve =   1
+
+##END of ./basic.par
+#=======================================================<<
+
+ellip_use_pt                            = 0
+parab_use_pt                            = 0
+parab_options_file = /usr/local/lib/python3.8/dist-packages/carputils/resources/petsc_options/ilu_cg_opts
+#=======================================================>>
+## /usr/local/lib/python3.8/dist-packages/carputils/resources/petsc_options/ilu_cg_opts ##
+#-pc_type bjacobi
+#-sub_pc_type ilu
+#-ksp_type cg
+##-ksp_view
+
+##END of /usr/local/lib/python3.8/dist-packages/carputils/resources/petsc_options/ilu_cg_opts
+#=======================================================<<
+
+ellip_options_file = /usr/local/lib/python3.8/dist-packages/carputils/resources/petsc_options/gamg_cg_opts
+
+simID                                   = Corner_18Mar
+meshname                                = Square1x
+dt                                      = 65
+tend                                    = 1000.0
+spacedt                                 = 10
+num_phys_regions                        = 2
+phys_region[0].name                     = Intracellular domain
+phys_region[0].ptype                    = 0
+phys_region[0].num_IDs                  = 1
+phys_region[0].ID[0]                    = 1
+phys_region[1].name                     = Extracellular domain
+phys_region[1].ptype                    = 1
+phys_region[1].num_IDs                  = 1
+phys_region[1].ID[0]                    = 1
+
+
+num_stim                                = 1
+stimulus[0].name                        = S1
+stimulus[0].stimtype                    = 0
+stimulus[0].strength                    = 250.0
+stimulus[0].duration                    = 15.0
+stimulus[0].start                       = 200
+stimulus[0].x0                          = -5050.0
+stimulus[0].xd                          = 200.0
+stimulus[0].y0                          = -5050.0
+stimulus[0].yd                          = 200.0
+stimulus[0].z0                          = -150.0
+stimulus[0].zd                          = 300.0
+
+
+gridout_i                               = 3
+gridout_e                               = 3
+
+
+num_gvecs =  1
+
+gvec[0].ID[0] = V
+
+gvec[0].name = V
+
+##END of parameters.par
+
+##END of parameters.par
+#=======================================================<<
+
+
+
+##END of parameters.par
+#=======================================================<<
+
