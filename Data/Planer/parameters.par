@@ -1,0 +1,84 @@
+# CARP GIT commit hash: 2271a3cccd7137f1e28c043c10adbd80480f1462
+# dependency hashes:    
+
+# openCARP +F parameters_corner.par 
+
+#=======================================================>>
+## parameters_corner.par ##
+# CARP GIT commit hash: 2271a3cccd7137f1e28c043c10adbd80480f1462
+# dependency hashes:    
+
+# openCARP +F parameter.par 
+
+#=======================================================>>
+## parameter.par ##
+# ionic setup
+num_imp_regions = 1 
+
+imp_region[0].im = AlievPanfilov
+
+#electrical setup
+
+num_stim             =      1
+
+stimulus[0].name                        = "S1"
+stimulus[0].stimtype                    = 0
+stimulus[0].strength                    = 600.0
+stimulus[0].duration                    = 3
+stimulus[0].x0                          = -5050
+stimulus[0].xd                          = 100
+stimulus[0].y0                          = -5050
+stimulus[0].yd                          = 10100
+stimulus[0].start                       = 50
+#stimulus[0].z0                          = -150.0
+#stimulus[0].zd                          = 300.0
+
+
+#stimulus[1].name                        = "S2"
+#stimulus[1].stimtype                    = 0
+#stimulus[1].strength                    = 700.0
+#stimulus[1].duration                    = 5
+#stimulus[1].x0                          = -5050
+#stimulus[1].xd                          = 100
+#stimulus[1].y0                          = 4050
+#stimulus[1].yd                          = 1000
+#stimulus[1].start                       = 50
+
+
+bidomain    =   0 
+spacedt     =   1.
+timedt      =   1.
+parab_solve =   1
+bidm_eqv_mono = 0
+
+simID                                   = Planer
+meshname                                = square
+dt                                      = 65
+tend                                    = 1000.0
+spacedt                                 = 12.9
+
+num_phys_regions                        = 1
+phys_region[0].name                     = Intracellular domain
+phys_region[0].ptype                    = 0
+phys_region[0].num_IDs                  = 1
+phys_region[0].ID[0]                    = 1
+
+#gridout_i                               = 3
+#gridout_e                               = 3
+
+num_gregions = 1
+gregion[0].g_il = 0.05
+gregion[0].g_it = 0.05
+gregion[0].g_in = 0.05
+
+num_gvecs =  1
+gvec[0].ID[0] = V
+gvec[0].name = V
+
+
+##END of parameter.par
+#=======================================================<<
+
+##END of parameters_corner.par
+#=======================================================<<
+

@@ -1,0 +1,14 @@
+
+Setting up ionic models and plugins
+-----------------------------------
+
+Assigning IMPS to tagged regions:
+	Ionic model: AlievPanfilov to tag region(s) [0] (implicitely)
+Setting up intracellular tissue poperties for 1 regions ..
+Stimulus 0: Selecting vertices from shape.
+Computed parabolic stiffness matrix in 0.213 seconds.
+Computed parabolic mass matrix in 0.108 seconds.
+Solving parabolic PDE (PETSc) system using absolute tolerance (1e-08) of preconditioned residual
+as stopping criterion
+parabolic PDE (PETSc) solver: switching to default settings "-pc_type bjacobi -sub_pc_type ilu -ksp_type cg".
+Initializing parabolic solver in 0.01263 seconds.
